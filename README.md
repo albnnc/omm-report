@@ -1,0 +1,2 @@
+- `npm i && npm run build` to get a report;
+- check out the `docs/index.html`.

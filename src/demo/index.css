@@ -1,0 +1,112 @@
+body {
+  background-color: white;
+  font-size: 13pt;
+  font-family: 'Latin Modern Roman', serif;
+  counter-reset: theorem;
+  counter-reset: definition;
+  max-width: 720px;
+  margin: 2em auto;
+  text-align: justify;
+  hyphens: auto;
+  padding: 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border: none;
+  font-weight: bold;
+}
+
+h1:first-of-type {
+  text-align: center;
+  display: block;
+}
+
+a,
+a:visited {
+  color: #a00;
+}
+
+ul {
+  list-style: disc;
+}
+
+@media (min-width: 43.75em) {
+  body {
+    padding: 0;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.theorem {
+  counter-increment: theorem;
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
+}
+
+.theorem:before {
+  content: 'Теорема ' counter(theorem) '.';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.lemma {
+  counter-increment: theorem;
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
+}
+
+.lemma:before {
+  content: 'Лемма ' counter(theorem) '.';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.proof {
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
+}
+
+.proof:before {
+  content: 'Доказательство.';
+  font-style: italic;
+}
+
+.proof:after {
+  content: '\25FB';
+  float: right;
+}
+
+.definition {
+  counter-increment: definition;
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
+}
+
+.definition:before {
+  content: 'Определение ' counter(definition) '.';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.author {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-variant-caps: small-caps;
+  text-align: center;
+}
+
+.katex {
+  font-size: 1.1em;
+}
